@@ -28,6 +28,8 @@ app.post("/sendemail",function(req,res){
 
 credential.find().then(function(data){
 
+    console.log(data[0].toJSON())
+
     const transporter = nodemailer.createTransport({
         service:"gmail",
         auth: {
